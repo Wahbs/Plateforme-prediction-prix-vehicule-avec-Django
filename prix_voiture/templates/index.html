@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="py-1 bg-dark">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="form-group">
+            <form action="" method="post" name="predicteur">
+                {% csrf_token %}
+                <div class="row bg-dark m-2 mt-5 p-2 m-lg-2 p-lg-2 shadow-lg">
+                    <span class="text-danger text-center p-2"> {{text}} </span>
+                    <span class="text-center p-2 text-light">Informations sur le vehicule</span>
+                    <div class="col-lg-10 mt-3 offset-lg-1" id="prediction">
+                        <div class="form-floatting pt-1">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="marque" id="marque" placeholder="Marque vehicule">
+                                <label for="marque">Marque vehicule</label>
+                            </div>
+                            <div class="form-floating pt-1">
+                                <input type="text" class="form-control" name="annee" id="annee" placeholder="Année de sortie">
+                                <label for="marque">Année de sortie</label>
+                            </div>
+                            <div class="form-floating pt-1">
+                                <input type="text" class="form-control" name="kilometrage" id="kilometrage" placeholder="Kilometrage">
+                                <label for="marque">Kilometrage</label>
+                            </div>
+                            <div class="form-floating pt-1">
+                                <!-- <input type="" class="form-control" name="boite_vitesse" id="boite_vitesse" placeholder="Boite de vitesse"> -->
+                                <select name="boite_vitesse" id="boite_vitesse" class="form-select" >
+                                    <option value="Automatique">Automatique</option>
+                                    <option value="Manuelle">Manuelle</option>
+                                </select>
+                                <label for="boite_vitesse">Bo&icirc;te de vitesse</label>
+                            </div>
+                            <div class="form-floating pt-1">
+                                <select name="carburant" id="carburant" class="form-select" >
+                                    <option value="Essence">Essence</option>
+                                    <option value="Electrique">Electrique</option>
+                                    <option value="Diesel">Diesel</option>
+                                    <option value="Hybrides">Hybrides</option>
+                                    <option value="Bicarburation essence bioéthanol">Bicarburation essence bioéthanol</option>
+                                    <option value="Bicarburation essence / gpl">Bicarburation essence / gpl</option>
+                                </select>
+                                <label for="carburant">carburant</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success mt-5 p-1 rounded-3">
+                        Valider
+                    </button>
+                    <span class="text-bold text-white">{{ output }}</span>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Predicteur</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'bootstrap-icone/font/bootstrap-icons.css' %}" />
+</head>
+<body class="bg-dark">
+    <nav class="navbar navbar-dark">
+        <div class="container-fluid px-2 px-lg-3 text-center">
+            <a class="navbar-brand rounded-3 shadow-sm" href="#!">
+                <span class="bg-light fw-bold p-1 text-dark rounded-3">
+                    Le-Prédicteur
+                </span>
+            </a>
+        </div>
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+</body>
+<footer class="mt-2 text-center text-white" style="min-height:100px">
+    Copyright &copy; Le Predicteur, 2023 <br/>
+    <small class="pt-3 text-muted"> Abdoul Habou  </small>
+</footer>
+</html>

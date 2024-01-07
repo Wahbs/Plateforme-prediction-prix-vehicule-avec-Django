@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="py-1 bg-dark">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row bg-dark m-3 mt-5 p-3 m-lg-5 p-lg-5 shadow-lg">
+            <span class="text-center p-2 text-light">Le prix prédit de la voiture <b>{{marque}}</b> sortie <b>{{annee}}</b>
+                 ayant parcouru <b>{{kilometrage}}</b>km à boite à vitesse <b>{{boite_vitesse}}</b> consommant le 
+                 carburant du type <b>{{carburant}}</b> est: </span>
+            <div class="col-lg-10 mt-3 offset-lg-1 text-center bg-success rounded-3" id="prediction">
+                <span class="fw-bold fs-5 text-white ">
+                    {{ output }} €
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
