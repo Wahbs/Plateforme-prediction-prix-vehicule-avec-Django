@@ -9,4 +9,4 @@ Afin de procéder à l'utlisation, il n'y a pas grand chose à faire, juste inst
 - si non visible, installez pickle, pour le chargement du modèle entraîné;
 - numpy et pandas pour la manipulation des vecteurs/matrix voire tableau.
 ## Utilisation
-tape le fameux *runserver* de django et enjoy !!!
+Tapez le fameux **manage.py runserver** de django et enjoy !!!
