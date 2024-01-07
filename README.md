@@ -10,3 +10,10 @@ Afin de procéder à l'utlisation, il n'y a pas grand chose à faire, juste inst
 - numpy et pandas pour la manipulation des vecteurs/matrix voire tableau.
 ## Utilisation
 Tapez le fameux **manage.py runserver** de django et enjoy !!!
+## Notes
+L'interface possède 5 champs obligatoires dont: 
+- la marque du vehicule;
+- l'année de mise en circulation;
+- le kilometrage parcouru;
+- le type de la boîte à vitesse;
+- le type du carburant.
